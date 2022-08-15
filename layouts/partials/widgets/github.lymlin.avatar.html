@@ -113,7 +113,7 @@
             <i class="fa-li fas fa-building-columns"></i>
             <div class="description">
               <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
-              <p class="institution">{{ .institution | safeHTML }}</p>
+              <span class="institution">{{ .institution | safeHTML }}</span>
             </div>
           </li>
           {{ end }}
