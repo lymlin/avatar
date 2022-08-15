@@ -95,6 +95,7 @@
       <div class="col-md-5">
         <div class="section-subheading">{{ i18n "interests" | markdownify }}</div>
         <ul class="ul-interests mb-0">
+            <!-- ul: 无序列表 -->
           {{ range . }}
           <li>{{ . | markdownify | emojify }}</li>
           {{ end }}
@@ -102,10 +103,11 @@
       </div>
       {{ end }}
 
-      {{ with $person.education }}
-      <div class="col-md-7">
-        <div class="section-subheading">{{ i18n "experience" | markdownify }}</div>
-        <ul class="ul-edu fa-ul mb-0">
+      {{ with $person.experiences }}
+      <div class="col-md-7"> 
+        <!-- col: 列；col-md-中等屏幕 -->
+        <div class="section-subheading">{{ i18n "experiences" | markdownify }}</div>
+        <ul class="ul-experiences mb-0">
           {{ range .courses }}
           <li>
             <i class="fa-li fas fa-building-columns"></i>
