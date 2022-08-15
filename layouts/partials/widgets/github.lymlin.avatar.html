@@ -17,7 +17,7 @@
 {{ $avatar := ($person_page.Resources.ByType "image").GetMatch "*avatar*" }}
 {{ $avatar_shape := site.Params.features.avatar.shape | default "circle" }}
 
-<!-- About widget -->
+<!-- my About widget -->
 <div class="row">
   <div class="col-12 col-lg-4">
     <div id="profile">
@@ -102,13 +102,13 @@
       </div>
       {{ end }}
 
-      {{ with $person.education }}
+      {{ with $person.work_education }}
       <div class="col-md-7">
-        <div class="section-subheading">{{ i18n "education" | markdownify }}</div>
+        <div class="section-subheading">{{ i18n "work_education" | markdownify }}</div>
         <ul class="ul-edu fa-ul mb-0">
           {{ range .courses }}
           <li>
-            <i class="fa-li fas fa-graduation-cap"></i>
+            <i class="fa-li fas fa-building-columns"></i>
             <div class="description">
               <p class="course">{{ .course }}{{ with .year }}, {{ . }}{{ end }}</p>
               <p class="institution">{{ .institution }}</p>
